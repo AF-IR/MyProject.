@@ -5,7 +5,7 @@ on:
   workflow_dispatch:
     inputs:
       url:
-        description: 'URL to download'
+        description: 'https://iranarze.ir/storage/uploads/2023/06/%D8%B3%D8%A7%D8%AE%D8%AA-%D9%85%D8%B5%D9%86%D9%88%D8%B9%D8%A7%D8%AA-%D9%81%D9%84%D8%B2%DB%8C-%D8%B3%D8%A8%DA%A9.pdf'
         required: true
         type: string
 
