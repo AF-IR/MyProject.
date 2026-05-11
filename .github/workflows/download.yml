@@ -1,0 +1,24 @@
+# .github/workflows/download.yml
+name: Download File
+
+on:
+  workflow_dispatch:
+    inputs:
+      url:
+        description: 'URL to download'
+        required: true
+        type: string
+
+jobs:
+  download:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download file
+        run: |
+          curl -L -o output.zip "${{ inputs.url }}"
+      
+      - name: Upload to GitHub
+        uses: actions/upload-artifact@v4
+        with:
+          name: downloaded-file
+          path: output.zip
